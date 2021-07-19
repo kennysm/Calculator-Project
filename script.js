@@ -1,15 +1,30 @@
-var oneBtn = document.getElementById('calc-one')
-var twoBtn = document.getElementById('calc-two')
-var threeBtn = document.getElementById('calc-three')
-var fourBtn = document.getElementById('calc-four')
-var fiveBtn = document.getElementById('calc-five')
-var sixBtn = document.getElementById('calc-six')
-var sevenBtn = document.getElementById('calc-seven')
-var eightBtn = document.getElementById('calc-eight')
-var nineBtn = document.getElementById('calc-nine')
-var zeroBtn = document.getElementById('calc-zero')
+const display = document.getElementById('display');
+const numbers = document.querySelectorAll('[id*=calc]')
+const operators = document.querySelectorAll('[id*=operators')
 
-var display = document.getElementById('display')
-var clearBtn = document.getElementById('calc-clear')
-var pm = document.getElementById('calc-pm')
+//Variáveis para armazenarmos o valor, o operador
+
+let newNumber = "true" // Indica se o próximo digito será um novo numero
+let beforeNumber = 0; // valor acumulado para uma operação
+
+
+function insert(calc)
+{
+    var number = document.getElementById ('display').innerHTML;
+    document.getElementById('display').innerHTML = number + calc;
+    
+}
+
+function clean(){
+    document.getElementById('display').innerHTML = "";
+}
+
+function calculate(){
+    var results = document.getElementById('display').innerHTML;
+    if(results) {
+        document.getElementById('display').innerHTML = eval(results);
+    }
+}
+
+
 

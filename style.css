@@ -10,7 +10,7 @@ body {
   margin:25px;
 }
 
-.calculator{
+.container{
   margin-left: calc(50% - 220px);
 }
 .line{
@@ -47,7 +47,8 @@ body {
   cursor:pointer;
   padding-top: 3px;
   color: black;
-  border-color:gray; 
+  border-color:gray;
+  transition: background 0.2s ease 0s;
 }
   
 .button.operator {
