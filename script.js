@@ -4,9 +4,10 @@ const operators = document.querySelectorAll('[id*=operators')
 
 //Variáveis para armazenarmos o valor, o operador
 
-let newNumber = "true" // Indica se o próximo digito será um novo numero
-let beforeNumber = 0; // valor acumulado para uma operação
+var number1; 
+var number2;
 
+//Insert function
 
 function insert(calc)
 {
@@ -15,16 +16,29 @@ function insert(calc)
     
 }
 
+//Clean function
+
 function clean(){
     document.getElementById('display').innerHTML = "";
 }
 
-function calculate(){
-    var results = document.getElementById('display').innerHTML;
-    if(results) {
-        document.getElementById('display').innerHTML = eval(results);
-    }
-}
 
+//Calculate function
+
+function calculate(data){
+    switch(data) {
+        case "=":
+            display.innerHTML = math.evaluate(display.innerHTML);
+            break;
+     
+    default:
+        display.innerHTML+= data;
+        
+    }
+    
+}
+   
+ 
+  
 
 
