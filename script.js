@@ -4,8 +4,7 @@ const operators = document.querySelectorAll('[id*=operators')
 
 //Variáveis para armazenarmos o valor, o operador
 
-var number1; 
-var number2;
+
 
 //Insert function
 
@@ -20,6 +19,12 @@ function insert(calc)
 
 function clean(){
     document.getElementById('display').innerHTML = "";
+}
+
+
+function back(){
+    var results = document.getElementById('display').innerHTML;
+    document.getElementById('display').innerHTML = results.substring(0, results.length -1);
 }
 
 
