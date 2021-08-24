@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Display-->
+  <div class="container">
+    <div class="display" id="display"></div>
+
+    <!--FirstLine-buttons-->
+    <div class="line">
+      <div class="button function c" onclick="clean()" id="calc-clear">AC</div>
+      <div class="button function pm" onclick="back()" id="calc-pm">C</div>
+      <div class="button function percent" onclick="insert('%')" id="calc-percent">%</div>
+      <div class="button operator division calc-button-operator" onclick="insertOperator('/')" id="calc-divide">÷</div>
+    </div>
+
+    <!--SecondLine-buttons-->
+
+    <div class="line">
+      <div class="button number-7 calc-button-number" onclick="insertNum('7')" id="calc-seven">7</div>
+      <div class="button number-8 calc-button-number" onclick="insertNum('8')" id="calc-eight">8</div>
+      <div class="button number-9 calc-button-number" onclick="insertNum('9')" id="calc-nine">9</div>
+      <div class="button operator multiplication calc-button-operator" onclick="insertOperator('*')" id="calc-multiply">
+        ×</div>
+    </div>
+
+    <!--thirdLine-buttons-->
+
+    <div class="line">
+      <div class="button number-4 calc-button-number" onclick="insertNum('4')" id="calc-four">4</div>
+      <div class="button number-5 calc-button-number" onclick="insertNum('5')" id="calc-five">5</div>
+      <div class="button number-6 calc-button-number" onclick="insertNum('6')" id="calc-six">6</div>
+      <div class="button operator subtraction calc-button-operator" onclick="insertOperator('-')" id="calc-minus">−
+      </div>
+    </div>
+
+    <!--FourthLine-buttons-->
+
+    <div class="line">
+      <div class="button number-1 calc-button-number" onclick="insertNum('1')" id="calc-one">1</div>
+      <div class="button number-2 calc-button-number" onclick="insertNum('2')" id="calc-two">2</div>
+      <div class="button number-3 calc-button-number" onclick="insertNum('3')" id="calc-three">3</div>
+      <div class="button operator addition calc-button-operator" onclick="insertOperator('+')" id="calc-plus">+</div>
+    </div>
+
+    <!--FifthLine-buttons-->
+
+    <div class="line">
+      <div class="button number-0 calc-button-number" onclick="insertNum('0')" id="calc-zero">0</div>
+      <div class="button decimal" onclick="insert('.')" id="calc-decimal">.</div>
+      <div class="button operator equal calc-button-operator" onclick="calculate('=')" id="calc-equals">=</div>
+    </div>
+  </div>
+</body>
+
+
+
+<!--Calculator.js-->
+<script src="./script.js"></script>
+
+</html>
