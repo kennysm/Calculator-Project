@@ -36,10 +36,10 @@ function calculate(data){
             display.innerHTML = math.evaluate(display.innerHTML);
             break;
      
-    default:
-        display.innerHTML+= data;
-        
-    }
+            default:
+                display.innerHTML+= data;
+                
+            }
     
 }
    
